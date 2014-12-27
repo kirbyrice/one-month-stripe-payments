@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141227183622) do
+ActiveRecord::Schema.define(version: 20141227194139) do
 
   create_table "purchases", force: true do |t|
     t.string   "email"
     t.integer  "amount"
-    t.string   "destription"
+    t.string   "description"
     t.string   "currency"
     t.string   "customer_id"
     t.string   "card"
