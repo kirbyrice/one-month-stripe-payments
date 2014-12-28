@@ -20,5 +20,4 @@ ActiveAdmin.register Purchase do
   #   permitted
   # end
   
-
 end
