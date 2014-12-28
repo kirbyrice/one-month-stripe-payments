@@ -1,5 +1,11 @@
 ActiveAdmin.register Purchase do
-
+  before_filter do
+    Purchase.class_eval do
+      def to_param
+        id.to_s
+      end
+    end
+  end
 
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
@@ -13,12 +19,6 @@ ActiveAdmin.register Purchase do
   #   permitted << :other if resource.something?
   #   permitted
   # end
-before_filter do
-  Purchase.class_eval do
-    def to_param
-      id.to_s
-    end
-  end
-end
+  
 
 end
